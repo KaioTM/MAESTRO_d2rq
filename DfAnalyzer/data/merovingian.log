@@ -1,0 +1,61 @@
+2024-05-07 21:03:35 MSG merovingian[3504]: Merovingian 11.49.7 (Dec2023-SP2) starting
+2024-05-07 21:03:35 MSG merovingian[3504]: monitoring dbfarm /home/vboxuser/Desktop/MAESTRO-main_v2/DfAnalyzer/data
+2024-05-07 21:03:35 MSG merovingian[3504]: accepting connections on TCP socket ip6-localhost:60000
+2024-05-07 21:03:35 MSG merovingian[3504]: accepting connections on TCP socket localhost:60000
+2024-05-07 21:03:35 MSG merovingian[3504]: accepting connections on UNIX domain socket /tmp/.s.monetdb.60000
+2024-05-07 21:03:35 MSG discovery[3504]: listening for UDP messages on ip6-localhost:60000
+2024-05-07 21:03:35 MSG discovery[3504]: listening for UDP messages on localhost:60000
+2024-05-07 21:03:35 MSG control[3504]: accepting connections on UNIX domain socket /tmp/.s.merovingian.60000
+2024-05-07 22:27:37 MSG merovingian[3504]: caught SIGTERM, starting shutdown sequence
+2024-05-07 22:27:38 MSG control[3504]: control channel closed
+2024-05-07 22:27:38 MSG merovingian[3504]: Merovingian 11.49.7 stopped
+2024-05-07 22:27:38 MSG merovingian[6942]: Merovingian 11.49.7 (Dec2023-SP2) starting
+2024-05-07 22:27:38 MSG merovingian[6942]: monitoring dbfarm /home/vboxuser/Desktop/MAESTRO-main_v2/DfAnalyzer/data
+2024-05-07 22:27:38 MSG merovingian[6942]: accepting connections on TCP socket ip6-localhost:60000
+2024-05-07 22:27:38 MSG merovingian[6942]: accepting connections on TCP socket localhost:60000
+2024-05-07 22:27:38 MSG merovingian[6942]: accepting connections on UNIX domain socket /tmp/.s.monetdb.60000
+2024-05-07 22:27:38 MSG discovery[6942]: listening for UDP messages on ip6-localhost:60000
+2024-05-07 22:27:38 MSG discovery[6942]: listening for UDP messages on localhost:60000
+2024-05-07 22:27:38 MSG control[6942]: accepting connections on UNIX domain socket /tmp/.s.merovingian.60000
+2024-05-08 00:47:32 MSG merovingian[6942]: caught SIGTERM, starting shutdown sequence
+2024-05-08 00:47:33 MSG merovingian[6942]: Merovingian 11.49.7 stopped
+2024-05-08 00:47:33 MSG control[6942]: control channel closed
+2024-05-08 00:47:34 MSG merovingian[7605]: Merovingian 11.49.7 (Dec2023-SP2) starting
+2024-05-08 00:47:34 MSG merovingian[7605]: monitoring dbfarm /home/vboxuser/Desktop/MAESTRO-main_v2/DfAnalyzer/data
+2024-05-08 00:47:34 MSG merovingian[7605]: accepting connections on TCP socket ip6-localhost:60000
+2024-05-08 00:47:34 MSG merovingian[7605]: accepting connections on TCP socket localhost:60000
+2024-05-08 00:47:34 MSG merovingian[7605]: accepting connections on UNIX domain socket /tmp/.s.monetdb.60000
+2024-05-08 00:47:34 MSG discovery[7605]: listening for UDP messages on ip6-localhost:60000
+2024-05-08 00:47:34 MSG discovery[7605]: listening for UDP messages on localhost:60000
+2024-05-08 00:47:34 MSG control[7605]: accepting connections on UNIX domain socket /tmp/.s.merovingian.60000
+2024-05-15 20:17:57 MSG merovingian[1878]: Merovingian 11.49.7 (Dec2023-SP2) starting
+2024-05-15 20:17:57 MSG merovingian[1878]: monitoring dbfarm /home/vboxuser/Desktop/MAESTRO-main_v2/DfAnalyzer/data
+2024-05-15 20:17:57 MSG merovingian[1878]: accepting connections on TCP socket ip6-localhost:60000
+2024-05-15 20:17:57 MSG merovingian[1878]: accepting connections on TCP socket localhost:60000
+2024-05-15 20:17:57 MSG merovingian[1878]: accepting connections on UNIX domain socket /tmp/.s.monetdb.60000
+2024-05-15 20:17:57 MSG discovery[1878]: listening for UDP messages on ip6-localhost:60000
+2024-05-15 20:17:57 MSG discovery[1878]: listening for UDP messages on localhost:60000
+2024-05-15 20:17:57 MSG control[1878]: accepting connections on UNIX domain socket /tmp/.s.merovingian.60000
+2024-05-16 00:05:37 MSG merovingian[1878]: caught SIGTERM, starting shutdown sequence
+2024-05-16 00:05:38 MSG merovingian[1878]: Merovingian 11.49.7 stopped
+2024-05-16 00:05:38 MSG control[1878]: control channel closed
+2024-05-16 00:05:38 MSG merovingian[11104]: Merovingian 11.49.7 (Dec2023-SP2) starting
+2024-05-16 00:05:38 MSG merovingian[11104]: monitoring dbfarm /home/vboxuser/Desktop/MAESTRO-main_v2/DfAnalyzer/data
+2024-05-16 00:05:38 MSG merovingian[11104]: accepting connections on TCP socket ip6-localhost:60000
+2024-05-16 00:05:38 MSG merovingian[11104]: accepting connections on TCP socket localhost:60000
+2024-05-16 00:05:38 MSG merovingian[11104]: accepting connections on UNIX domain socket /tmp/.s.monetdb.60000
+2024-05-16 00:05:38 MSG discovery[11104]: listening for UDP messages on ip6-localhost:60000
+2024-05-16 00:05:38 MSG discovery[11104]: listening for UDP messages on localhost:60000
+2024-05-16 00:05:38 MSG control[11104]: accepting connections on UNIX domain socket /tmp/.s.merovingian.60000
+2024-05-20 15:57:06 MSG merovingian[11104]: caught SIGTERM, starting shutdown sequence
+2024-05-20 15:57:07 MSG merovingian[11104]: Merovingian 11.49.7 stopped
+2024-05-20 15:57:07 MSG control[11104]: control channel closed
+2024-05-20 15:57:07 MSG merovingian[31220]: Merovingian 11.49.7 (Dec2023-SP2) starting
+2024-05-20 15:57:07 MSG merovingian[31220]: monitoring dbfarm /home/vboxuser/Desktop/MAESTRO-main_v2/DfAnalyzer/data
+2024-05-20 15:57:07 MSG merovingian[31220]: accepting connections on TCP socket ip6-localhost:60000
+2024-05-20 15:57:07 MSG merovingian[31220]: accepting connections on TCP socket localhost:60000
+2024-05-20 15:57:07 MSG merovingian[31220]: accepting connections on UNIX domain socket /tmp/.s.monetdb.60000
+2024-05-20 15:57:07 MSG discovery[31220]: listening for UDP messages on ip6-localhost:60000
+2024-05-20 15:57:07 MSG discovery[31220]: listening for UDP messages on localhost:60000
+2024-05-20 15:57:07 MSG control[31220]: accepting connections on UNIX domain socket /tmp/.s.merovingian.60000
+2024-05-20 16:01:11 ERR merovingian[31220]: client error: no such database: dataflow_analyzer

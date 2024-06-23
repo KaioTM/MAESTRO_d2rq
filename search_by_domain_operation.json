@@ -1,0 +1,758 @@
+{
+   "Dataflows": [
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 4,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               14
+            ],
+            [
+               16
+            ],
+            [
+               18
+            ],
+            [
+               20
+            ],
+            [
+               22
+            ],
+            [
+               24
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 30,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               170
+            ],
+            [
+               172
+            ],
+            [
+               174
+            ],
+            [
+               176
+            ],
+            [
+               178
+            ],
+            [
+               180
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 100,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               590
+            ],
+            [
+               592
+            ],
+            [
+               594
+            ],
+            [
+               596
+            ],
+            [
+               598
+            ],
+            [
+               600
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 104,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               614
+            ],
+            [
+               616
+            ],
+            [
+               618
+            ],
+            [
+               620
+            ],
+            [
+               622
+            ],
+            [
+               624
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 110,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               650
+            ],
+            [
+               652
+            ],
+            [
+               654
+            ],
+            [
+               656
+            ],
+            [
+               658
+            ],
+            [
+               660
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 122,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               722
+            ],
+            [
+               724
+            ],
+            [
+               726
+            ],
+            [
+               728
+            ],
+            [
+               730
+            ],
+            [
+               732
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 132,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               782
+            ],
+            [
+               784
+            ],
+            [
+               786
+            ],
+            [
+               788
+            ],
+            [
+               790
+            ],
+            [
+               792
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 142,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               842
+            ],
+            [
+               844
+            ],
+            [
+               846
+            ],
+            [
+               848
+            ],
+            [
+               850
+            ],
+            [
+               852
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 146,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               866
+            ],
+            [
+               868
+            ],
+            [
+               870
+            ],
+            [
+               872
+            ],
+            [
+               874
+            ],
+            [
+               876
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 158,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               938
+            ],
+            [
+               940
+            ],
+            [
+               942
+            ],
+            [
+               944
+            ],
+            [
+               946
+            ],
+            [
+               948
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 164,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               974
+            ],
+            [
+               976
+            ],
+            [
+               978
+            ],
+            [
+               980
+            ],
+            [
+               982
+            ],
+            [
+               984
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 198,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               1178
+            ],
+            [
+               1180
+            ],
+            [
+               1182
+            ],
+            [
+               1184
+            ],
+            [
+               1186
+            ],
+            [
+               1188
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 224,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               1334
+            ],
+            [
+               1336
+            ],
+            [
+               1338
+            ],
+            [
+               1340
+            ],
+            [
+               1342
+            ],
+            [
+               1344
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 294,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               1754
+            ],
+            [
+               1756
+            ],
+            [
+               1758
+            ],
+            [
+               1760
+            ],
+            [
+               1762
+            ],
+            [
+               1764
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 298,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               1778
+            ],
+            [
+               1780
+            ],
+            [
+               1782
+            ],
+            [
+               1784
+            ],
+            [
+               1786
+            ],
+            [
+               1788
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 326,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               1946
+            ],
+            [
+               1948
+            ],
+            [
+               1950
+            ],
+            [
+               1952
+            ],
+            [
+               1954
+            ],
+            [
+               1956
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 336,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2006
+            ],
+            [
+               2008
+            ],
+            [
+               2010
+            ],
+            [
+               2012
+            ],
+            [
+               2014
+            ],
+            [
+               2016
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 346,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2066
+            ],
+            [
+               2068
+            ],
+            [
+               2070
+            ],
+            [
+               2072
+            ],
+            [
+               2074
+            ],
+            [
+               2076
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 352,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2102
+            ],
+            [
+               2104
+            ],
+            [
+               2106
+            ],
+            [
+               2108
+            ],
+            [
+               2110
+            ],
+            [
+               2112
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 358,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2138
+            ],
+            [
+               2140
+            ],
+            [
+               2142
+            ],
+            [
+               2144
+            ],
+            [
+               2146
+            ],
+            [
+               2148
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 392,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2342
+            ],
+            [
+               2344
+            ],
+            [
+               2346
+            ],
+            [
+               2348
+            ],
+            [
+               2350
+            ],
+            [
+               2352
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 418,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2498
+            ],
+            [
+               2500
+            ],
+            [
+               2502
+            ],
+            [
+               2504
+            ],
+            [
+               2506
+            ],
+            [
+               2508
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 488,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2918
+            ],
+            [
+               2920
+            ],
+            [
+               2922
+            ],
+            [
+               2924
+            ],
+            [
+               2926
+            ],
+            [
+               2928
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 492,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               2942
+            ],
+            [
+               2944
+            ],
+            [
+               2946
+            ],
+            [
+               2948
+            ],
+            [
+               2950
+            ],
+            [
+               2952
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 510,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               3050
+            ],
+            [
+               3052
+            ],
+            [
+               3054
+            ],
+            [
+               3056
+            ],
+            [
+               3058
+            ],
+            [
+               3060
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 520,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               3110
+            ],
+            [
+               3112
+            ],
+            [
+               3114
+            ],
+            [
+               3116
+            ],
+            [
+               3118
+            ],
+            [
+               3120
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 530,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               3170
+            ],
+            [
+               3172
+            ],
+            [
+               3174
+            ],
+            [
+               3176
+            ],
+            [
+               3178
+            ],
+            [
+               3180
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 534,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               3194
+            ],
+            [
+               3196
+            ],
+            [
+               3198
+            ],
+            [
+               3200
+            ],
+            [
+               3202
+            ],
+            [
+               3204
+            ]
+         ]
+      },
+      {
+         "Domain_operation": "Sequence_alignment_refinament_operation_2089",
+         "Dataflow_id": 546,
+         "Attribute:": "model",
+         "Value": "JTT",
+         "Data_transformations_execution_id:": [
+            [
+               3266
+            ],
+            [
+               3268
+            ],
+            [
+               3270
+            ],
+            [
+               3272
+            ],
+            [
+               3274
+            ],
+            [
+               3276
+            ]
+         ]
+      }
+   ]
+}

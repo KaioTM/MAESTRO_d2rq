@@ -1,0 +1,14 @@
+
+****Welcome to ModelGenerator v0.85****
+
+If you use ModelGenerator in your analysis, please cite:
+
+Thomas M Keane, Christopher J Creevey , Melissa M Pentony, Thomas J Naughton and James O McInerney (2006) Assessment of methods for amino acid matrix selection and their use on empirical data shows that ad hoc assumptions for choice of matrix are not justified, BMC Evolutionary Biology, 6:29
+
+http://www.biomedcentral.com/1471-2148/6/29
+
+Input sequence file: /home/vboxuser/Desktop/MAESTRO-main_v2/sources/input/613
+Format is FASTA
+Datatype is AMINO ACID
+Duplicate Sequence Name: 1lcl|AAM66350.1 U2 splicing auxiliary factors26 kDa; U2AF26
+Error: Found duplicate sequence name in alignment

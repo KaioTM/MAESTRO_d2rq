@@ -1,0 +1,416 @@
+        <html>
+        <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+        <center>
+        <h3>Association between activity, program, relations and their attributes</h3>
+        </center>
+
+        <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+        <script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+        <style type="text/css">
+
+                body{
+                    width: 720px;
+                    height: 1000px;
+                }
+                #mynetwork {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ffffff;
+                    border: 0px solid lightgray;
+                    position: relative;
+                    float: left;
+                    margin: 10px;
+
+                }
+
+                
+
+                
+
+                
+        </style>
+
+        </head>
+
+        <body>
+        <div id = "mynetwork"></div>
+
+
+        <script type="text/javascript">
+
+            // initialize global variables.
+            var edges;
+            var nodes;
+            var network; 
+            var container;
+            var options, data;
+
+            
+            // This method is responsible for drawing the graph, returns the drawn network
+            function drawGraph() {
+                var container = document.getElementById('mynetwork');
+                
+                
+
+                // parsing and collecting nodes and edges from the python
+                nodes = new vis.DataSet([   
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "operation_0292", 
+                                                "label": "Operation_0292", 
+                                                "shape": "ellipse", 
+                                                "title": "[ontoexpline.Operation_0292]"
+                                            },{
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "mafft", 
+                                                "label": "Mafft", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.Remove_Pipe]"
+                                            },
+                                            {
+                                                "borderWidthSelected": "3", 
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "prog2", 
+                                                "label": "Prog2", 
+                                                "shape": "box", 
+                                                "size": 20, "title": "prog2"
+                                            },
+                                            {
+                                                "borderWidthSelected": "3", 
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "alignment_activity", 
+                                                "label": "Alignment_Act", 
+                                                "shape": "circle", 
+                                                "size": 20, "title": "sequences alignment. Profile: Mandatory",
+                                                
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "in_relation", 
+                                                "label": "In_relation", 
+                                                "shape": "circle", 
+                                                "title": "[ontoexpline.in_relation]"
+                                            }, 
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "out_relation", 
+                                                "label": "Out_relation", 
+                                                "shape": "circle", 
+                                                "title": "[ontoexpline.out_relation]"
+                                            }, 
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "ORTHOMCL1007", 
+                                                "label": "ORT7.fasta", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.ORTHOMCL1007]",
+                                                "group": "in"
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "ORTHOMCL16", 
+                                                "label": "ORT6.phy", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.ORTHOMCL16]",
+                                                "group": "in"
+
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "log_report", 
+                                                "label": "Log.fasta", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.log]"
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "ORTHOMCL1007_check", 
+                                                "label": "Alignment_check.fasta", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.ORTHOMCL1007_check]"
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "sequence", 
+                                                "label": "Sequence", 
+                                                "shape": "circle", 
+                                                "title": "[ontoexpline.sequence]"
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "report", 
+                                                "label": "Report", 
+                                                "shape": "circle", 
+                                                "title": "[ontoexpline.report]"
+                                            },
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "validated_sequence", 
+                                                "label": "Alignment", 
+                                                "shape": "circle", 
+                                                "title": "[ontoexpline.validated_sequence]"
+                                            }
+                                        ]);
+
+                edges = new vis.DataSet([
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "mafft", 
+                                                "label": "implements", 
+                                                "shape": "square", 
+                                                "to": "alignment_activity", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "alignment_activity", 
+                                                "label": "is_a", 
+                                                "shape": "square", 
+                                                "to": "operation_0292", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "mafft", 
+                                                "label": "is_a", 
+                                                "shape": "square", 
+                                                "to": "operation_0292", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "prog2", 
+                                                "label": "is_a", 
+                                                "shape": "square", 
+                                                "to": "operation_0292", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "prog2", 
+                                                "label": "implements", 
+                                                "shape": "square", 
+                                                "to": "alignment_activity", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "mafft", 
+                                                "label": "hasInPort", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL1007", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "mafft", 
+                                                "label": "hasInPort", 
+                                                "shape": "square", 
+                                                "to": "log_report", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "prog2", 
+                                                "label": "hasInPort", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL16", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "mafft", 
+                                                "label": "hasOutPort", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL1007_check", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "prog2", 
+                                                "label": "hasOutPort", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL1007_check", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "alignment_activity", 
+                                                "label": "hasInputRelation", 
+                                                "shape": "square", 
+                                                "to": "in_relation", 
+                                                "weight": 50
+                                            }, 
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "alignment_activity", 
+                                                "label": "hasOutputRelation", 
+                                                "shape": "square", 
+                                                "to": "out_relation", 
+                                                "weight": 50
+                                            }, 
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "in_relation", 
+                                                "label": "composedBy", 
+                                                "shape": "square", 
+                                                "to": "sequence", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "sequence", 
+                                                "label": "wasAssociatedWith", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL1007", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "sequence", 
+                                                "label": "wasAssociatedWith", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL16", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "out_relation", 
+                                                "label": "composedBy", 
+                                                "shape": "square", 
+                                                "to": "validated_sequence", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "out_relation", 
+                                                "label": "composedBy", 
+                                                "shape": "square", 
+                                                "to": "report", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "report", 
+                                                "label": "wasAssociatedWith", 
+                                                "shape": "square", 
+                                                "to": "log_report", 
+                                                "weight": 150
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "validated_sequence", 
+                                                "label": "wasAssociatedWith", 
+                                                "shape": "square", 
+                                                "to": "ORTHOMCL1007_check", 
+                                                "weight": 150
+                                            }
+                                        
+                                        ]);
+
+                // adding nodes and edges to the graph
+                data = {nodes: nodes, edges: edges};
+
+                var options = {
+            "configure": {
+                "enabled": false
+            },
+            "edges": {
+                "color": {
+                    "inherit": true
+                },
+                "smooth": {
+                    "enabled": true,
+                    "type": "continuous"
+                }
+            },
+            "interaction": {
+                "dragNodes": true,
+                "hideEdgesOnDrag": false,
+                "hideNodesOnDrag": false
+            },
+            "layout": {
+                "hierarchical": {
+                    "blockShifting": true,
+                    "edgeMinimization": true,
+                    "enabled": false,
+                    "levelSeparation": 160,
+                    "parentCentralization": true,
+                    "sortMethod": "hubsize",
+                    "treeSpacing": 300
+                },
+                "improvedLayout": true,
+                "randomSeed": 0
+            },
+            "physics": {
+                "enabled": false,
+                "stabilization": {
+                    "enabled": true,
+                    "fit": true,
+                    "iterations": 1000,
+                    "onlyDynamicEdges": false,
+                    "updateInterval": 50
+                }
+            }
+        };
+                
+                
+
+                
+
+                network = new vis.Network(container, data, options);
+            
+                
+
+
+                
+
+                return network;
+
+            }
+
+            drawGraph();
+
+        </script>
+        <center>
+            <h4>Figure 3. The activity (blue) is implemented by just one program (green), consumes and generates functions (yellow). The relations are composed by attributes (orange).</h4>
+        </center>
+
+
+        </body>
+        </html>

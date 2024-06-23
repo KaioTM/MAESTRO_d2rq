@@ -1,0 +1,121 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1>Abstract Workflow</h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 50%;
+            height: 90%;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"borderWidthSelected": "3", "color": "#95C0F9", "group": 2, "id": "Atividade_Validation", "label": "Atividade_Validation", "shape": "box", "size": 20, "title": "Atividade_Validation. Profile: Mandatory."}, {"color": "#FCF3CF", "group": 2, "id": "Rel_Validation_In", "label": "Rel_Validation_In", "shape": "box", "title": "[ontoexpline.Input_Validation_att]"}, {"color": "#FCF3CF", "group": 2, "id": "Rel_Validation_Out", "label": "Rel_Validation_Out", "shape": "box", "title": "[ontoexpline.Output_Validation]"}, {"borderWidthSelected": "3", "color": "#D4EFDF", "group": 2, "id": "Atividade_Alinhamento", "label": "Atividade_Alinhamento", "shape": "box", "size": 20, "title": "Atividade_Alinhamento. Profile: Mandatory and Variant."}, {"color": "#FCF3CF", "group": 2, "id": "Rel_Alignment_Out", "label": "Rel_Alignment_Out", "shape": "box", "title": "[ontoexpline.alignment_att]"}, {"borderWidthSelected": "3", "color": "#95C0F9", "group": 2, "id": "Atividade_Evolutive_Model", "label": "Atividade_Evolutive_Model", "shape": "box", "size": 20, "title": "Atividade_Evolutive_Model. Profile: Mandatory."}, {"color": "#FCF3CF", "group": 2, "id": "Rel_Evolutive_Model_Out", "label": "Rel_Evolutive_Model_Out", "shape": "box", "title": "[ontoexpline.evolutiveModel_att]"}, {"borderWidthSelected": "3", "color": "#D4EFDF", "group": 2, "id": "Atividade_Tree_Generation", "label": "Atividade_Tree_Generation", "shape": "box", "size": 20, "title": "Atividade_Tree_Generation. Profile: Mandatory and Variant."}, {"color": "#FCF3CF", "group": 2, "id": "Rel_Converted_Alignment_Out", "label": "Rel_Converted_Alignment_Out", "shape": "box", "title": "[ontoexpline.converted_alignment_att]"}, {"color": "#FCF3CF", "group": 2, "id": "Rel_Tree_Generator_Out", "label": "Rel_Tree_Generator_Out", "shape": "box", "title": "[ontoexpline.phylogenomic_tree]"}]);
+        edges = new vis.DataSet([{"arrows": "to", "color": "black", "from": "Atividade_Validation", "label": "hasInputRelation", "shape": "square", "to": "Rel_Validation_In", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Validation", "label": "hasOutputRelation", "shape": "text", "to": "Rel_Validation_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Alinhamento", "label": "hasInputRelation", "shape": "square", "to": "Rel_Validation_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Alinhamento", "label": "hasOutputRelation", "shape": "text", "to": "Rel_Alignment_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Evolutive_Model", "label": "hasInputRelation", "shape": "square", "to": "Rel_Alignment_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Evolutive_Model", "label": "hasOutputRelation", "shape": "text", "to": "Rel_Evolutive_Model_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Tree_Generation", "label": "hasInputRelation", "shape": "square", "to": "Rel_Alignment_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Tree_Generation", "label": "hasInputRelation", "shape": "square", "to": "Rel_Converted_Alignment_Out", "weight": 5}, {"arrows": "to", "color": "black", "from": "Atividade_Tree_Generation", "label": "hasOutputRelation", "shape": "text", "to": "Rel_Tree_Generator_Out", "weight": 5}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "layout": {
+        "hierarchical": {
+            "blockShifting": true,
+            "edgeMinimization": true,
+            "enabled": true,
+            "levelSeparation": 150,
+            "parentCentralization": true,
+            "sortMethod": "hubsize",
+            "treeSpacing": 200
+        },
+        "improvedLayout": true,
+        "randomSeed": 0
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

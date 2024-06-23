@@ -1,0 +1,229 @@
+        <html>
+        <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+        <center>
+        <h3>Association between activity, program, relations and their attributes</h3>
+        </center>
+
+        <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+        <script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+        <style type="text/css">
+
+                body{
+                    width: 620px;
+                    height: 500px;
+                }
+                #mynetwork {
+                    width: 100%;
+                    height: 90%;
+                    background-color: #ffffff;
+                    border: 1px solid lightgray;
+                    position: relative;
+                    float: left;
+                    margin: 10px;
+
+                }
+
+                
+
+                
+
+                
+        </style>
+
+        </head>
+
+        <body>
+        <div id = "mynetwork"></div>
+
+
+        <script type="text/javascript">
+
+            // initialize global variables.
+            var edges;
+            var nodes;
+            var network; 
+            var container;
+            var options, data;
+
+            
+            // This method is responsible for drawing the graph, returns the drawn network
+            function drawGraph() {
+                var container = document.getElementById('mynetwork');
+                
+                
+
+                // parsing and collecting nodes and edges from the python
+                nodes = new vis.DataSet([   {
+                                                "color": "#b4e892", 
+                                                "group": 2, 
+                                                "id": "remove_pipe", 
+                                                "label": "Remove_Pipe", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.Remove_Pipe]"
+                                            },
+                                            {
+                                                "borderWidthSelected": "3", 
+                                                "color": "#95C0F9", 
+                                                "group": 2, 
+                                                "id": "validation_activity", 
+                                                "label": "Validation_Activity", 
+                                                "shape": "box", 
+                                                "size": 20, "title": "inputValidation. Profile: Mandatory"
+                                            }, 
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "rel_input_validation", 
+                                                "label": "Rel_input_validation", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.sequence_input_att]"
+                                            }, 
+                                            {
+                                                "color": "#FCF3CF", 
+                                                "group": 2, 
+                                                "id": "rel_output_validation", 
+                                                "label": "Rel_output_validation", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.attribute_2]"
+                                            }, 
+                                            {
+                                                "color": "#f99b5c", 
+                                                "group": 2, 
+                                                "id": "input_sequence", 
+                                                "label": "Input_Sequence", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.Input_Sequence]"
+                                            },
+                                            {
+                                                "color": "#f99b5c", 
+                                                "group": 2, 
+                                                "id": "attribute_2", 
+                                                "label": "Attribute_2", 
+                                                "shape": "box", 
+                                                "title": "[ontoexpline.Attribute_2]"
+                                            }
+                                        ]);
+
+                edges = new vis.DataSet([
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "remove_pipe", 
+                                                "label": "implements", 
+                                                "shape": "square", 
+                                                "to": "validation_activity", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "validation_activity", 
+                                                "label": "hasInputRelation", 
+                                                "shape": "square", 
+                                                "to": "rel_input_validation", 
+                                                "weight": 50
+                                            }, 
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "validation_activity", 
+                                                "label": "hasOutputRelation", 
+                                                "shape": "square", 
+                                                "to": "rel_output_validation", 
+                                                "weight": 50
+                                            }, 
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "rel_input_validation", 
+                                                "label": "composedBy", 
+                                                "shape": "square", 
+                                                "to": "input_sequence", 
+                                                "weight": 50
+                                            },
+                                            {
+                                                "arrows": "to", 
+                                                "color": "black", 
+                                                "from": "rel_input_validation", 
+                                                "label": "composedBy", 
+                                                "shape": "square", 
+                                                "to": "attribute_2", 
+                                                "weight": 50
+                                            }
+                                        
+                                        ]);
+
+                // adding nodes and edges to the graph
+                data = {nodes: nodes, edges: edges};
+
+                var options = {
+            "configure": {
+                "enabled": false
+            },
+            "edges": {
+                "color": {
+                    "inherit": true
+                },
+                "smooth": {
+                    "enabled": false,
+                    "type": "continuous"
+                }
+            },
+            "interaction": {
+                "dragNodes": true,
+                "hideEdgesOnDrag": false,
+                "hideNodesOnDrag": false
+            },
+            "layout": {
+                "hierarchical": {
+                    "blockShifting": true,
+                    "edgeMinimization": true,
+                    "enabled": true,
+                    "levelSeparation": 150,
+                    "parentCentralization": true,
+                    "sortMethod": "hubsize",
+                    "treeSpacing": 300
+                },
+                "improvedLayout": true,
+                "randomSeed": 0
+            },
+            "physics": {
+                "enabled": true,
+                "stabilization": {
+                    "enabled": true,
+                    "fit": true,
+                    "iterations": 1000,
+                    "onlyDynamicEdges": false,
+                    "updateInterval": 50
+                }
+            }
+        };
+                
+                
+
+                
+
+                network = new vis.Network(container, data, options);
+            
+                
+
+
+                
+
+                return network;
+
+            }
+
+            drawGraph();
+
+        </script>
+        <center>
+            <h4>Figure 3. The activity (blue) is implemented by just one program (green), consumes and generates functions (yellow). The relations are composed by attributes (orange).</h4>
+        </center>
+
+
+        </body>
+        </html>
